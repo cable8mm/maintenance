@@ -4,10 +4,10 @@
 
 ## Setup
 
-Webroot : src/
+Webroot : public/
 
 ## Deploy
 
 ```bash
-bin/deploy.sh
+sh bin/deploy.sh
 ```
