@@ -1,5 +1,11 @@
 # Maintenance
 
+[![update changelog](https://github.com/cable8mm/maintenance/actions/workflows/update-changelog.yml/badge.svg)](https://github.com/cable8mm/maintenance/actions/workflows/update-changelog.yml)
+![Static Badge](https://img.shields.io/badge/Vite-5.1.4-646CFF?logo=vite&labelColor=FED32B)
+![Static Badge](https://img.shields.io/badge/HTML-CSS-red?logo=html5&label=HTML)
+![GitHub Release](https://img.shields.io/github/v/release/cable8mm/maintenance)
+![GitHub License](https://img.shields.io/github/license/cable8mm/maintenance)
+
 The 'HTML Simple Maintenance Page' is a lightweight maintenance page designed in a simple HTML format, requiring only one file.
 
 ![Preview](/docs/assets/maintenance-preview.png)
