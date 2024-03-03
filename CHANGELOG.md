@@ -1,5 +1,14 @@
 # Release Notes
 
+## v2.1.0 - 2024-03-03
+
+### What's Changed
+
+* Add badges onto README by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/maintenance/pull/6
+* Add test and deploy onto README by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/maintenance/pull/7
+
+**Full Changelog**: https://github.com/cable8mm/maintenance/compare/v2.0.0...v2.1.0
+
 ## v2.0.0 - 2024-03-03
 
 ### What's Changed
