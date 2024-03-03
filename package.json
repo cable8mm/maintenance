@@ -1,6 +1,6 @@
 {
   "name": "maintenance",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "\"HTML Simple Maintenance Page\" is a maintenance page in a very light HTML format requiring only one file.",
   "scripts": {
     "dev": "vite",
