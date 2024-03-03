@@ -1,10 +1,11 @@
 {
-  "name": "maintenance.seoultanzstation",
+  "name": "maintenance",
   "version": "1.0.0",
   "description": "\"HTML Simple Maintenance Page\" is a maintenance page in a very light HTML format requiring only one file.",
   "scripts": {
-    "lint": "npx htmlhint \"**/*.html\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,6 @@
   },
   "homepage": "https://github.com/cable8mm/maintenance#readme",
   "devDependencies": {
-    "htmlhint": "^1.1.4"
+    "vite": "^5.1.4"
   }
 }
