@@ -12,7 +12,9 @@ The 'HTML Simple Maintenance Page' is a lightweight maintenance page designed in
 
 ## Install
 
-You don't need anything.
+```sh
+git clone https://github.com/cable8mm/maintenance.git
+```
 
 ## Usage
 
@@ -32,7 +34,17 @@ And you can create and edit website with hotload.
 npm run dev
 ```
 
-At last, visit http://localhost:5174/. The port 5174 can be changed as needed. You are free to edit `index.html` and the `maintenance.png` image. The website reloads whenever you save `index.html`.
+At last, visit http://localhost:5174/. The port 5174 can be changed as needed. You are free to edit `index.html` and the `maintenance.png` image.
+
+## Test
+
+The website reloads whenever you save `index.html`. Trust your eyes and instincts.
+
+## Deploy
+
+Copy the files located in the `public` folder to the document root in your web server.
+
+While FTP is good, using rsync would upload faster. Additionally, CI/CD is generally the best approach.
 
 ## License
 
