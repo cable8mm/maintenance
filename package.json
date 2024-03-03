@@ -4,19 +4,18 @@
   "description": "\"HTML Simple Maintenance Page\" is a maintenance page in a very light HTML format requiring only one file.",
   "scripts": {
     "lint": "npx htmlhint \"**/*.html\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "sh bin/deploy.sh"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seoultanzstation/maintenance.git"
+    "url": "git+https://github.com/cable8mm/maintenance.git"
   },
   "author": "Sam Lee",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/seoultanzstation/maintenance/issues"
+    "url": "https://github.com/cable8mm/maintenance/issues"
   },
-  "homepage": "https://github.com/seoultanzstation/maintenance#readme",
+  "homepage": "https://github.com/cable8mm/maintenance#readme",
   "devDependencies": {
     "htmlhint": "^1.1.4"
   }
