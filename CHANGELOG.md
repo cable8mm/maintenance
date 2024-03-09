@@ -1,5 +1,13 @@
 # Release Notes
 
+## v2.1.2 - 2024-03-09
+
+### What's Changed
+
+* Fix a error not to deploy by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/maintenance/pull/9
+
+**Full Changelog**: https://github.com/cable8mm/maintenance/compare/v2.1.1...v2.1.2
+
 ## v2.1.1 - 2024-03-09
 
 ### What's Changed
