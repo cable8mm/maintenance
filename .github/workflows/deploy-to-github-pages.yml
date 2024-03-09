@@ -1,7 +1,10 @@
 name: deploy-to-github-pages
 
 on:
-  workflow_call:
+  release:
+    types: [released]
+
+permissions: {}
 
 jobs:
   publish-pages:
