@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/cable8mm/maintenance#readme",
   "devDependencies": {
-    "vite": "^5.1.4"
+    "vite": "^6.4.2"
   }
 }
