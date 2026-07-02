@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,19 @@
       name="description"
       content="We are currently performing system maintenance. Please check back later."
     />
+    <meta property="og:title" content="시스템 점검 중" />
+    <meta
+      property="og:description"
+      content="웹사이트가 일시적으로 사용 불가능합니다. 잠시 후 다시 방문해 주세요."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="시스템 점검 중" />
+    <meta
+      name="twitter:description"
+      content="웹사이트가 일시적으로 사용 불가능합니다. 잠시 후 다시 방문해 주세요."
+    />
+    <meta http-equiv="refresh" content="300" />
     <title>We're sorry, system has an error.</title>
     <style>
       :root {
@@ -16,6 +29,7 @@
         --title-size: 4em;
         --subtitle-size: 2.5em;
         --message-size: 2em;
+        --contact-size: 1.5em;
       }
 
       * {
@@ -44,6 +58,30 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+
+      .maintenance-image.error {
+        display: none;
+      }
+
+      .fallback-background {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          #1a1a2e 0%,
+          #16213e 50%,
+          #0f3460 100%
+        );
+        z-index: -1;
+      }
+
+      .maintenance-image.error + .fallback-background {
+        display: block;
       }
 
       .message-overlay {
@@ -76,11 +114,28 @@
         line-height: 1.4;
       }
 
+      .contact-info {
+        margin-top: 30px;
+        font-size: var(--contact-size);
+        opacity: 0.8;
+      }
+
+      .contact-info a {
+        color: var(--text-color);
+        text-decoration: underline;
+        transition: opacity 0.3s ease;
+      }
+
+      .contact-info a:hover {
+        opacity: 0.7;
+      }
+
       @media (max-width: 768px) {
         :root {
           --title-size: 2.5em;
           --subtitle-size: 1.8em;
           --message-size: 1.3em;
+          --contact-size: 1.3em;
         }
 
         .message-overlay {
@@ -94,6 +149,7 @@
           --title-size: 2em;
           --subtitle-size: 1.4em;
           --message-size: 1.1em;
+          --contact-size: 1.2em;
         }
 
         .message-overlay {
@@ -108,13 +164,30 @@
         src="maintenance.png"
         alt="시스템 점검 중 - 웹사이트가 일시적으로 사용 불가능합니다"
         class="maintenance-image"
+        onerror="this.classList.add('error')"
       />
+      <div class="fallback-background"></div>
       <div class="message-overlay">
         <h1 class="message-title">We're sorry.</h1>
         <p class="message-subtitle">
           We are currently attempting to restore a website.
         </p>
         <p class="message-text">Please come back in an hour.</p>
+        <div class="contact-info">
+          <p>
+            문의사항:
+            <a href="mailto:support@example.com">support@example.com</a>
+          </p>
+          <p>
+            상태 확인:
+            <a
+              href="https://status.example.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >status.example.com</a
+            >
+          </p>
+        </div>
       </div>
     </main>
   </body>
