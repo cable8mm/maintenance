@@ -1,35 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>We're sorry, system has a error.</title>
+    <meta
+      name="description"
+      content="We are currently performing system maintenance. Please check back later."
+    />
+    <title>We're sorry, system has an error.</title>
+    <style>
+      :root {
+        --bg-color: #0b0b10;
+        --text-color: #ffffff;
+        --title-size: 4em;
+        --subtitle-size: 2.5em;
+        --message-size: 2em;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+          Cantarell, sans-serif;
+        overflow: hidden;
+      }
+
+      .maintenance-container {
+        position: relative;
+        display: inline-block;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .maintenance-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .message-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--text-color);
+        padding: 20px;
+        text-align: center;
+        width: 90%;
+        max-width: 1200px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+
+      .message-title {
+        font-size: var(--title-size);
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .message-subtitle {
+        font-size: var(--subtitle-size);
+        margin-bottom: 15px;
+        line-height: 1.3;
+      }
+
+      .message-text {
+        font-size: var(--message-size);
+        line-height: 1.4;
+      }
+
+      @media (max-width: 768px) {
+        :root {
+          --title-size: 2.5em;
+          --subtitle-size: 1.8em;
+          --message-size: 1.3em;
+        }
+
+        .message-overlay {
+          width: 95%;
+          padding: 15px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        :root {
+          --title-size: 2em;
+          --subtitle-size: 1.4em;
+          --message-size: 1.1em;
+        }
+
+        .message-overlay {
+          padding: 10px;
+        }
+      }
+    </style>
   </head>
-  <body style="background-color: #0b0b10">
-    <div style="position: relative; display: inline-block">
+  <body>
+    <main class="maintenance-container" role="main">
       <img
         src="maintenance.png"
-        style="display: block; width: 100vw; height: 100vh"
+        alt="시스템 점검 중 - 웹사이트가 일시적으로 사용 불가능합니다"
+        class="maintenance-image"
       />
-      <div
-        style="
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          color: #fff;
-          padding: 10px 10px;
-          text-align: center;
-          width: 80%;
-        "
-      >
-        <p style="font-size: 4em">We're sorry.</p>
-        <p style="font-size: 2.5em">
+      <div class="message-overlay">
+        <h1 class="message-title">We're sorry.</h1>
+        <p class="message-subtitle">
           We are currently attempting to restore a website.
         </p>
-        <p style="font-size: 2em">Please come back in an hour.</p>
+        <p class="message-text">Please come back in an hour.</p>
       </div>
-    </div>
+    </main>
   </body>
 </html>
